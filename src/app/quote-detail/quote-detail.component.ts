@@ -10,6 +10,14 @@ export class QuoteDetailComponent implements OnInit {
 
   @Input() quote!: Quote;
 
+  addUpVote() {
+    this.quote.upVote++;
+  }
+
+  addDownVote() {
+    this.quote.downVote++;
+  }
+
   constructor() { }
 
   ngOnInit(): void {
