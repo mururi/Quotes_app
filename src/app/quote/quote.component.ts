@@ -14,6 +14,15 @@ export class QuoteComponent implements OnInit {
     new Quote('Success consists of failure to failure without loss of enthusiasm', 'Winston Churchil', 'Jane Doe')
   ];
 
+  deleteQuote(deleteConfirm: boolean, index: number) {
+    if (deleteConfirm) {
+      let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].content}?`);
+      if (toDelete) {
+        this.quotes.splice(index, 1);
+      }
+    }
+  }
+
   constructor() { }
 
   ngOnInit(): void {
