@@ -11,11 +11,11 @@ export class QuoteDetailComponent implements OnInit {
   @Input() quote!: Quote;
   @Output() deleteConfirm = new EventEmitter<boolean>();
 
-  addUpVote() {
+  addUpVote(upVote: boolean) {
     this.quote.upVote++;
   }
 
-  addDownVote() {
+  addDownVote(downVote: boolean) {
     this.quote.downVote++;
   }
   
