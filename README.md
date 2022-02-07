@@ -15,7 +15,7 @@ This is an Angular web application that displays quotes, allows a user to upload
 Ensure that your device of choice has a browser installed.
 Click the link provided below to view the site.
 
-https://
+https://mururi.github.io/Quotes_app/
 
 ## Technologies Used 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.4.
