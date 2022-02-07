@@ -10,8 +10,8 @@ export class QuoteComponent implements OnInit {
 
   quotes: Quote[] = [
     new Quote('Life is either a daring adventure or nothing.', 'Helen Keller', 'Dennis Kiboi', new Date(2021,7,27)),
-    new Quote('Live as if you were to die tomorrow. Learn as if you were to live forever.', 'Mahatma Gandhi', 'John Doe', new Date(2021,12,25)),
-    new Quote('Success consists of failure to failure without loss of enthusiasm', 'Winston Churchil', 'Jane Doe', new Date(2021,1,10))
+    new Quote('Live as if you were to die tomorrow. Learn as if you were to live forever.', 'Mahatma Gandhi', 'John Doe', new Date(2021,11,25)),
+    new Quote('Success consists of failure to failure without loss of enthusiasm', 'Winston Churchil', 'Jane Doe', new Date(2022,0,10))
   ];
 
   deleteQuote(deleteConfirm: boolean, index: number) {
@@ -25,7 +25,8 @@ export class QuoteComponent implements OnInit {
 
   addNewQuote(quote: Quote) {
     quote.date = new Date();
-    this.quotes.push(quote);
+    let copyQuote = {...quote}
+    this.quotes.push(copyQuote);
   }
 
   constructor() { }
