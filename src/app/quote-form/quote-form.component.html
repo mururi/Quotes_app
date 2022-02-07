@@ -1,33 +1,30 @@
 <div class="container-fluid form-wrapper m-3 py-3 px-4">
   <h2 class="text-center">Upload a Quote</h2>
   
-  <form #quoteForm = 'ngForm' (ngSubmit)='submitQuote()'>
+  <form #quoteForm = 'ngForm' (ngSubmit)='submitQuote()' class="text-center">
 
-    <div class="form-group">
-      <label for="content">Quote</label>
-      <textarea class="form-control" id="content" rows="4" [(ngModel)]="newQuote.content" name="content" #content='ngModel' required></textarea>
+    <div class="form-group py-4">
+      <textarea class="form-control" id="content" rows="4" [(ngModel)]="newQuote.content" name="content" #content='ngModel' placeholder="Write Your Favourite Quote Here" required></textarea>
       <div [hidden]="content.valid || content.pristine" class="alert alert-danger">
         <p>Quote is Required</p>
       </div>
     </div>
 
-    <div class="form-group">
-      <label for="author">Author of Quote</label>
-      <input type="text" required class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author='ngModel'>
+    <div class="form-group py-3">
+      <input type="text" required class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author='ngModel' placeholder="Name of the Quotes Author">
       <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
         <p>Name of Author is Required</p>
       </div>
     </div>
     
-    <div class="form-group">
-      <label for="name">Your Name</label>
-      <input type="text" required class="form-control" id="name" [(ngModel)]="newQuote.submittedBy" name="name" #name='ngModel'>
+    <div class="form-group py-3">
+      <input type="text" required class="form-control" id="name" [(ngModel)]="newQuote.submittedBy" name="name" #name='ngModel' placeholder="Your Name">
       <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
         <p>Your Name is Required</p>
       </div>
     </div>
 
-    <button type="submit" class="btn">Add Quote</button>
+    <button type="submit" class="btn my-3" id="submit-button">Add Quote</button>
     
   </form>
 </div>
