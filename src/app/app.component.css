@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+
+* {
+  font-family: 'Raleway', sans-serif;
+}
+
+.wrapper {
+  background: linear-gradient(90deg, #FFAFBD 0%, #FFC3A0 100%);
+  min-height: 100vh;
+}
+
+h1 {
+  font-family: 'Style Script', cursive;
+  color: black;
+}

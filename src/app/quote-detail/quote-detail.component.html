@@ -1,12 +1,22 @@
-<p>{{quote.author}}</p>
-<p>Posted by: {{quote.submittedBy}}</p>
-<p>Posted on: {{quote.date|date}}, {{quote.date|dateCount}} Days ago.</p>
-<div id="up-vote">
-  {{quote.upVote}}
-  <button class="btn" (click)="addUpVote(true)"><span class="material-icons">thumb_up</span></button>
+<p>~ {{quote.author}}</p>
+<div class="row">
+  <div class="col-6 text-start">
+    <p>Posted by: {{quote.submittedBy}}</p>
+  </div>
+  <div class="col-6 text-end">
+    <p>Posted on: {{quote.date|date}}, {{quote.date|dateCount}} Days ago.</p>
+  </div>
+  <div class="col-6 text-start">
+    <div id="up-vote " class="d-inline-block">
+      {{quote.upVote}}
+      <button class="btn" (click)="addUpVote(true)"><span class="material-icons">thumb_up</span></button>
+    </div>
+    <div id="down-vote" class="d-inline-block">
+      {{quote.downVote}}
+      <button class="btn" (click)="addDownVote(true)"><span class="material-icons">thumb_down</span></button>
+    </div>
+  </div>
+  <div class="col-6 text-end">
+    <button (click)='toDelete(true)'><span class="material-icons-outlined">delete</span></button>
+  </div>
 </div>
-<div id="down-vote">
-  {{quote.downVote}}
-  <button class="btn" (click)="addDownVote(true)"><span class="material-icons">thumb_down</span></button>
-</div>
-<button (click)='toDelete(true)'><span class="material-icons-outlined">delete</span></button>
