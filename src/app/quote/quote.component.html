@@ -1,12 +1,12 @@
 <div class="container-md">
   <div class="row">
-    <div class="col-md-8">
-      <div *ngFor="let quote of quotes; let i = index" class="custom-card my-3 text-center py-3 px-5">
-        <h3>{{ quote.content }}</h3>
+    <div class="col-lg-8">
+      <div *ngFor="let quote of quotes; let i = index" class="custom-card my-3 text-center py-4 px-5">
+        <h2 class="mb-0">{{ quote.content }}</h2>
         <app-quote-detail [quote]="quote" (deleteConfirm)="deleteQuote($event, i)"></app-quote-detail>
       </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-lg-4">
       <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
     </div>
   </div>
